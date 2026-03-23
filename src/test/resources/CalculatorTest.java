@@ -1,5 +1,5 @@
-package com.demo;
 
+import com.demo.Calculator;
 import org.junit.Test;
 import static org.testng.AssertJUnit.assertEquals;
 
