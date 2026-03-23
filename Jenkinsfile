@@ -2,18 +2,18 @@ pipeline {
     agent any
 
     tools {
-            maven 'Maven 3'
+        maven 'Maven 3'
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Vieetj-Anh/ci-cd-demo.git'
+                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
             }
         }
 
-        stage('Build & Test') {
+        stage('Test') {
             steps {
                 bat 'mvn clean test'
             }
