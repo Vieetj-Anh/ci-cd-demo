@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Vieetj-Anh/ci-cd-demo.git'
+                git 'https://github.com/USERNAME/REPO.git'
             }
         }
 
@@ -17,6 +17,12 @@ pipeline {
             steps {
                 bat 'mvn clean test'
             }
+        }
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
         }
     }
 }
